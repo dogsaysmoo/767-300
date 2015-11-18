@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <name>Airport Operations</name>
+  <layout>vbox</layout>
+
+  <text>
+    <label>Doors</label>
+  </text>
+
+  <hrule/>
+
+  <group>
+    <layout>vbox</layout>
+    <halign>center</halign>
+
+    <text>
+      <label>Check a door name to open it. Uncheck it to close.</label>
+    </text>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Cargo Door (Front Left)</label>
+      <property>controls/switches/cargodoor1</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/cargodoor1</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Cargo Door (Front Right)</label>
+      <property>controls/switches/cargodoor2</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/cargodoor2</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Passenger Door (Front Left)</label>
+      <property>controls/switches/passengerdoor1</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/passengerdoor1</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Passenger Door (Front Right)</label>
+      <property>controls/switches/passengerdoor2</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/passengerdoor2</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Passenger Door (Rear Left)</label>
+      <property>controls/switches/passengerdoor3</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/passengerdoor3</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Passenger Door (Rear Right)</label>
+      <property>controls/switches/passengerdoor4</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/passengerdoor4</property>
+      </binding>
+    </checkbox>
+
+
+  </group>
+
+  <hrule/>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+
+    <button>
+      <legend>Close</legend>
+      <default>true</default>
+      <key>Esc</key>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+    </button>
+
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+</PropertyList>

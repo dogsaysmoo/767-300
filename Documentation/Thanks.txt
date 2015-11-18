@@ -1,0 +1,10 @@
+Thanks to;
+
+Tim Sandsen, for some brilliant Livery Textures from FSX, who allowed them to be released under our GNU GPL.
+Gijs de Rooy for beautifully modelled Followme and Catering vehicle models.
+Erobo for the Randomatic failures script.
+iSix for starting out work on initial development.
+Emmanuel Baranger for the shadow code, matching that of the 737-100.
+Keita Yokoyama for providing recorded cockpit announcements.
+Gijs de Rooy for providing the Cockpit Seatbelt chime effect.
+xSaint for his engine moisture code and non-CVS pushback codes.

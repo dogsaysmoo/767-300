@@ -1,0 +1,668 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <sim>
+	<startup>
+            <splash-texture>Aircraft/767-300/splash.png</splash-texture>
+        </startup>
+
+	<flight-recorder include="Systems/flight-recorder.xml"/> 
+
+       	<instrument-options>
+       	    <canvas-popup-enable type="bool">true</canvas-popup-enable>
+       	</instrument-options>
+
+        <model>
+	    <pushback>
+		<kp type="double">-0.05</kp>
+		<kd type="double">0</kd>
+		<ti type="double">10</ti>
+		<td type="double">0.00001</td>
+		<position-norm type="double">0</position-norm>
+	    </pushback>
+        </model>
+
+	<view n="0">
+            <name>Pilot View</name>
+            <type>lookfrom</type>
+            <internal type="bool">true</internal>
+            <config>
+                <x-offset-m type="double">-0.565</x-offset-m>
+                <y-offset-m type="double">-0.25</y-offset-m>
+                <z-offset-m type="double">-23.75</z-offset-m>
+                <pitch-offset-deg>-12.43</pitch-offset-deg>
+                <limits>
+                    <enabled type="bool">true</enabled> 
+                </limits>
+		<default-field-of-view-deg type="double">87.0</default-field-of-view-deg>
+            </config>
+        </view>
+
+	<view n="100">
+	    <name>Wing View</name>
+	    <type>lookfrom</type>
+	    <internal archive="y">false</internal>
+	    <config>
+		<from-model type="bool">true</from-model>
+		<from-model-idx type="int">0</from-model-idx>
+		<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      		<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+      		<pitch-offset-deg>-8.0</pitch-offset-deg>
+      		<heading-offset-deg type="double">90</heading-offset-deg> <!-- parallel to the panel -->
+      		<x-offset-m archive="y"> -2.65 </x-offset-m> <!--Left/Right-->
+      		<y-offset-m archive="y"> 0.66 </y-offset-m> <!--Up/Down-->
+      		<z-offset-m archive="y"> 5.80 </z-offset-m> <!--Fdw/Back-->
+	    </config>
+	</view>
+
+	<view n="102">
+	    <name>Tail view</name>
+	    <type>lookfrom</type>
+	    <internal type="bool">false</internal>
+	    <config>
+    		<from-model type="bool">true</from-model>
+    		<from-model-idx type="int">0</from-model-idx>
+    		<ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
+    		<x-offset-m type="double">0.00</x-offset-m>
+    		<y-offset-m type="double">13.20</y-offset-m>
+    		<z-offset-m type="double">25.55</z-offset-m>
+    		<pitch-offset-deg>-10</pitch-offset-deg>
+		<default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+	   </config>
+	   <dynamic>
+		<enabled type="bool">false</enabled>
+	   </dynamic>
+	</view>
+
+	<view n="104">
+            <name>CoPilot View</name>
+            <type>lookfrom</type>
+            <internal type="bool">true</internal>
+            <config>
+		<from-model type="bool">true</from-model>
+                <x-offset-m type="double"> 0.67</x-offset-m>
+                <y-offset-m type="double">-0.30</y-offset-m>
+                <z-offset-m type="double">-23.50</z-offset-m>
+                <pitch-offset-deg>-13.5</pitch-offset-deg>
+                <limits>
+                    <enabled type="bool">true</enabled> 
+                </limits>
+		<default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+            </config>
+        </view>
+
+	<view n="106">
+            <name>Overhead Panel View</name>
+            <type>lookfrom</type>
+            <internal type="bool">true</internal>
+            <config>
+		<from-model type="bool">true</from-model>
+                <x-offset-m type="double">0.0</x-offset-m>
+                <y-offset-m type="double">-0.30</y-offset-m>
+                <z-offset-m type="double">-23.50</z-offset-m>
+                <pitch-offset-deg>37</pitch-offset-deg>
+                <limits>
+                    <enabled type="bool">true</enabled> 
+                </limits>
+		<default-field-of-view-deg type="double">81.0</default-field-of-view-deg>
+            </config>
+        </view>
+
+   	<airport>
+        	<runways>
+            		<start-offset-m>25</start-offset-m>
+        	</runways>
+	</airport>
+
+        <chase-distance-m>-80</chase-distance-m>
+		
+        <sound>
+            <path>Aircraft/767-300/Sounds/767-sound.xml</path>
+            <switch type = "bool">0</switch>
+  	    <Evolume>1</Evolume>
+
+	    <no-smoking-sign type="bool">false</no-smoking-sign>
+	    <seatbelt-sign type="bool">false</seatbelt-sign>
+        </sound>
+		
+		<!-- Ajuste dos flaps -->
+	<!--flaps>
+		<setting>0.000</setting>
+		<setting>0.125</setting>
+		<setting>0.250</setting>
+		<setting>0.375</setting>
+		<setting>0.500</setting>
+		<setting>0.625</setting>
+		<setting>0.750</setting>
+		<setting>0.875</setting>
+		<setting>1.000</setting>
+	</flaps-->
+
+	<flaps>
+	    <setting>0.000</setting>
+	    <setting>0.033</setting>
+	    <setting>0.167</setting>
+	    <setting>0.500</setting>
+	    <setting>0.667</setting>
+	    <setting>0.833</setting>
+	    <setting>1.000</setting>
+	</flaps>
+
+        <weight n="0">
+            <name>Crew</name>
+            <weight-lb>350</weight-lb> 
+            <max-lb>600</max-lb>
+            <min-lb>250</min-lb>
+        </weight>
+
+<!-- O menu de ajuda dessa aeronave -->
+	<help>
+            <title>Boeing 767-300</title>
+            <key>
+                <name>w/W</name>
+                <desc>Walk forwards/backwards (on interior views only)</desc>
+            </key>
+            <key>
+                <name>Delete</name>
+                <desc>toggle thrust reversers</desc>
+            </key>
+            <key>
+                <name>g/G</name>
+                <desc>raise/lower landing gear</desc>
+            </key>
+            <key>
+                <name>B (shift and b)</name>
+                <desc>toggle parking brakes</desc>
+            </key>
+            <key>
+                <name>pgup/pgdn</name>
+                <desc>throttle increase/decrease</desc>
+            </key>
+            <key>
+                <name>[/]</name>
+                <desc>raise/lower flaps</desc>
+            </key>
+            <key>
+                <name>Ctrl-b</name>
+                <desc>toggle speed brakes</desc>
+            </key>
+            <key>
+                <name>s</name>
+                <desc>hold to start engines</desc>
+            </key>
+	    <text>
+=== Takeoff Procedure ===
+Pre-departure:
+1. - Allocate your fuel, passengers and weight under Equipment/fuel and payload
+   - Once passengers and baggage are loaded and weights defined, close the exit doors
+     and ensure stairways are disconnected
+   - Ensure a complete systems checklist is carried out
+   - Airport operations vehicles should be disconnected from around the aircraft
+   - Taxi away from the terminal with a Pushback truck
+   - In poor weather conditions, or crowded airport aprons, A Followme truck should be used if required
+
+Departure:
+2. Select 767-300/Autostart (or hold s) to get the engines running
+3. set your flaps suitably for the conditions and runway length
+4. Release the parking brakes
+5. Apply throttle gently, until at 75% throttle
+6. Rotate at around 140-160kt
+7. Raise landing gear at positive climb
+8. Maintain positive climb
+
+
+Captain Notes:
+- Never reverse from terminal without aid from a pushback. It should be used until the aircraft is on the taxiway.
+- Ensure you allow enough room to manoeuvre around the airport, given that it is a long aircraft.
+- On a short or wet runway, flaps should be set lower on both landing and takeoff, and throttle set to full on takeoff.
+- There are risks of overrunning the runway apron upon landing and takeoff, aswell as overrunning the taxiway corners in the 767. In wet conditions especially; take care and ensure that the correct speed guidelines and height are maintained.
+- During turbulant conditions, The seatbelt warning sound should be initiated by the captain.
+
+=== Cruising ===
+Cruising Speed: Mach 0.83 (907 km/h, 490 knots, 564 mph)
+Service Ceiling: 39,000ft
+
+=== Landing ===
+1. Decend through 200kt, reaching roughly 160kt 1mile before reaching the apron
+2. set flaps accordingly
+3. Land at roughly 140kt, touch down carefully and smoothly at 135kt.
+4. Apply Speedbrakes
+5. Apply thrust reversal and apply throttle
+6. Lower throttle and deactivate thrust reversers
+7. If necessary, Emergency brakes should be used
+	    </text>
+        </help>
+
+        <menubar>
+	  <default>
+            <menu n="100">
+		<enabled type="bool">true</enabled>
+                <item>
+		    <label>Autostart</label>
+                    <binding>
+			<command>property-toggle</command>
+                        <property>sim/model/start-idling</property>
+                    </binding>
+                </item>
+                <item>
+                    <label>Select Livery</label>
+                    <binding>
+                	<command>nasal</command>
+                        <script>aircraft.livery.dialog.toggle()</script>
+                    </binding>
+		</item>		
+		<item>
+      		    <label>Airport Operations</label>
+      		    <binding>
+       			<command>nasal</command>
+       			<script>
+	  var mal = gui.Dialog.new("/sim/gui/dialogs/Boeing747/menu/dialog", 
+                                                              "Aircraft/767-300/Dialogs/airportoperations-dialog.xml");
+        mal.open();
+       			</script>
+      		    </binding>
+     		</item>
+   		<item>
+    		    <label>Pushback</label>
+    		    <binding>
+     			<command>dialog-show</command>
+     			<dialog-name>pushback</dialog-name>
+    		    </binding>
+   		</item>
+		<item>
+      		    <label>Announcements</label>
+      		    <binding>
+       			<command>nasal</command>
+       			<script>
+	  var mal = gui.Dialog.new("/sim/gui/dialogs/Boeing747/menu/dialog", 
+                                                              "Aircraft/767-300/Dialogs/announcements-dialog.xml");
+        mal.open();
+       			</script>
+		    </binding>
+     		</item>
+		<item>
+		    <label>Doors</label>
+		    <binding>
+			<command>nasal</command>
+       			<script>
+	  var mal = gui.Dialog.new("/sim/gui/dialogs/Boeing747/menu/dialog", 
+                                                              "Aircraft/767-300/Dialogs/doors-dialog.xml");
+        mal.open();
+       			</script>
+		    </binding>
+     		</item>
+
+	    </menu>
+	  </default>
+	</menubar>
+
+	<systems>
+	    <autopilot>
+		<name>Autopilot</name>
+		<path>Aircraft/767-300/Systems/767-autopilot.xml</path>
+	    </autopilot>
+	    <autopilot>
+		<name>Autopilot helpers</name>
+		<path>Aircraft/Generic/generic-autopilot-helper.xml</path>
+	    </autopilot>
+	    <autopilot>
+		<name>Autothrottle</name>
+		<path>Aircraft/767-300/Systems/767-autothrottle.xml</path>
+	    </autopilot>
+	    <autopilot>
+		<name>Autobrake</name>
+		<path>Aircraft/767-300/Systems/767-autobrake.xml</path>
+	    </autopilot>
+	    <autopilot>
+		<name>Spoilers</name>
+		<path>Aircraft/767-300/Systems/767-spoilers.xml</path>
+	    </autopilot>
+	    <autopilot>
+		<name>Pushback</name>
+		<path>Aircraft/767-300/Systems/pushback.xml</path>
+	    </autopilot>
+	    <autopilot>
+		<name>Flight Controls</name>
+		<path>Aircraft/767-300/Systems/767-flt-ctrls.xml</path>
+	    </autopilot>
+	    <autopilot>
+		<name>Pressurization</name>
+		<path>Aircraft/767-300/Systems/pressurization.xml</path>
+	    </autopilot>
+        </systems>
+
+        <instrumentation>
+            <path>Aircraft/767-300/Systems/instrumentation.xml</path>
+        </instrumentation>
+
+        <hud>
+            <enable3d n="1">false</enable3d>
+        </hud>
+        <virtual-cockpit archive="y">true</virtual-cockpit>
+        <allow-toggle-cockpit>true</allow-toggle-cockpit>
+
+	<multiplay>
+       	    <generic>
+          	<int n="0" type="int">  0 </int>  <!-- Dual Control boolean light switches-->
+		<int n="2" alias="/controls/lighting/beacon-state/state"/>
+		<int n="3" alias="/controls/lighting/strobe-state/state"/>
+		<int n="4" alias="/controls/lighting/landing-lights"/>
+		<int n="5" alias="/controls/lighting/landing-lights[1]"/>
+		<int n="6" alias="/controls/lighting/landing-lights[2]"/>
+		<int n="7" alias="/controls/lighting/nav-lights"/>
+
+       		<float n="0">0</float>        <!-- for the shadow -->
+       		<float n="1">0</float>        <!-- for the shadow -->
+            	<float n="2">0</float>        <!-- for the shadow -->
+            	<float n="3" alias="/controls/lighting/panel-norm"/>    <!-- rembrandt cockpit (flightdeck) lights -->
+       		<float n="4" alias="/position/gear-agl-m"/>
+		<float n="5" alias="/surface-positions/left-reverser-pos-norm"/>
+
+            	<string n="0" type="string"></string> <!-- Dual Control analog TDM-mpp1 (magnetos, flaps etc.) -->
+            	<string n="1" type="string"></string> <!-- Dual Control analog TDM-mpp2 only pilot to copilot (fuel in tank etc.) -->
+       	    </generic>
+       	</multiplay>
+ 
+    </sim>
+
+    	<consumables>
+        	<fuel>
+        	    <tank n="0"><name>LH Main</name></tank>
+        	    <tank n="1"><name>RH Main</name></tank>
+        	    <tank n="2"><name>Center</name></tank>
+        	</fuel>
+    	</consumables>
+
+	<autopilot>
+		<autobrake>
+			<config>
+				<idle-throttle type="double">0.1</idle-throttle>
+				<pilot-input type="double">0</pilot-input>
+			</config>
+			<step type="int">-1</step>
+		</autobrake>
+	</autopilot>
+
+	<engines>
+		<apu>
+			<rpm type="double">0</rpm>
+			<on-fire type="bool">false</on-fire>
+			<running type="bool">false</running>
+			<serviceable type="bool">true</serviceable>
+		</apu>
+		<engine n="0">
+			<rpm type="double">0</rpm>
+			<failed type="bool">false</failed>
+			<on-fire type="bool">false</on-fire>
+			<running type="bool">false</running>
+			<started type="bool">false</started>
+		</engine>
+		<engine n="1">
+			<rpm type="double">0</rpm>
+			<failed type="bool">false</failed>
+			<on-fire type="bool">false</on-fire>
+			<running type="bool">false</running>
+			<started type="bool">false</started>
+		</engine>
+	</engines>
+
+    	<instrumentation>
+		<clock>
+			<et-knob type="int">0</et-knob>
+		</clock>
+		<dme n="0">
+            		<serviceable>true</serviceable>
+            		<frequencies>
+                	    <source>/instrumentation/nav[0]/frequencies/selected-mhz</source>
+            		</frequencies>
+        	</dme>
+        	<dme n="1">
+            		<serviceable>true</serviceable>
+            		<frequencies>
+                	    <source>/instrumentation/nav[1]/frequencies/selected-mhz</source>
+            		</frequencies>
+        	</dme>
+		<!--efis>
+			<ehsi-ctr type="bool">0</ehsi-ctr>
+		</efis-->
+		<fmc>
+			<to-flap type="double">5</to-flap>
+			<vspeeds>
+				<V1 type="double">0</V1>
+				<VR type="double">0</VR>
+				<V2 type="double">0</V2>
+			</vspeeds>
+		</fmc>
+
+
+		<mk-viii>  <!-- mk-viii configuration, see: http://wiki.flightgear.org/index.php/GPWS -->
+	            <serviceable>true</serviceable>     <!-- EGPWS_ENABLE -->
+	            <configuration-module>
+	                <category-1>                    <!-- AIRCRAFT_MODE_TYPE_SELECT -->
+	                   255 <!-- aircraft type T1, fast turbofan -->
+	                </category-1>
+	                <category-4>                    <!-- ALTITUDE_CALLOUTS -->
+	                    13 <!-- enable all altitude callouts -->
+	                </category-4>
+	                <category-8>                    <!-- RADIO_ALTITUDE_INPUT_SELECT -->
+	                     3 <!-- use precise (but YASim-specific) gear altitude -->
+	                </category-8>
+	                <category-13>                   <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
+	                     5 <!-- flashing warning lamp -->
+	                </category-13>
+	            </configuration-module>
+	            <voice>
+	                <file-prefix type="string">Sounds/mk-viii/</file-prefix>
+	            </voice>
+	            <inputs>                            <!-- Module I/O -->
+	                <arinc429>
+	                    <!-- provide fixed value for decision height -->
+	                    <decision-height-ncd> false </decision-height-ncd>
+	                    <decision-height> 250 </decision-height>
+	                </arinc429>
+	            </inputs>
+	            <input-feeders>    <!-- disable some internal default feeders -->
+	                <discretes>
+	                    <!-- will provide custom (nasal) sources for the following input feeders -->
+	                    <glideslope-inhibit> false </glideslope-inhibit>
+	                    <landing-gear> false </landing-gear>
+	                    <landing-flaps> false </landing-flaps>
+	                </discretes>
+	            </input-feeders>
+		    <speaker>                           <!-- Speaker Configuration -->
+	                <max-dist type="double"> 5 </max-dist>        <!-- Max. distance where speaker is heard -->
+	                <reference-dist type="double"> 2 </reference-dist> <!-- Distance to pilot -->
+	                <volume type="double"> 0.6 </volume>          <!-- Volume at reference distance -->
+	            </speaker>
+	        </mk-viii>
+
+
+		<nav-compass n="0">
+			<nav-display n="0" type="int">0</nav-display>
+			<nav-display n="1" type="int">0</nav-display>
+		</nav-compass>
+		<nav-compass n="1">
+			<nav-display n="0" type="int">0</nav-display>
+			<nav-display n="1" type="int">0</nav-display>
+		</nav-compass>
+		<transponder>
+            		<inputs>
+                		<knob-pos type="int">0</knob-pos>
+            		</inputs>
+            		<id-code type="string">1200</id-code>
+            		<serviceable type="bool">true</serviceable>
+        	</transponder>
+            	<tcas>
+            		<serviceable type="bool">true</serviceable>
+            		<inputs>
+                		<mode type="int">0</mode>       <!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
+            		</inputs>
+            		<!--voice>
+                		<file-prefix type="string">Sounds/tcas/</file-prefix>
+            		</voice-->
+            		<speaker>                           <!-- Speaker Configuration -->
+                		<max-dist type="double"> 2 </max-dist>        <!-- Max. distance where speaker is heard -->
+                		<reference-dist type="double"> 1 </reference-dist> <!-- Distance to pilot -->
+                		<volume type="double"> 1 </volume>          <!-- Volume at reference distance -->
+            		</speaker>
+            	</tcas>
+
+    	</instrumentation>
+
+    	<input>
+            <keyboard>
+		<key n="119">
+		    <name>w</name>
+		    <desc>Walk forward toward view</desc>
+		    <repeatable>true</repeatable>
+		    <binding>
+     			<command>nasal</command>
+     			<script>walk.walk_about(0.1)</script>
+		    </binding>
+		</key>
+		<key n="87">
+		    <name>W</name>
+		    <desc>Walk backward from view</desc>
+		    <repeatable>true</repeatable>
+		    <binding>
+    			<command>nasal</command>
+    			<script>walk.walk_about(-0.1)</script>
+		    </binding>
+		</key>  
+		<key n="127">
+                    <name>Delete</name>
+                    <desc>Toggle Reversers</desc>
+                    <binding>
+                    	<command>property-toggle</command>
+                    	<property>controls/engines/engine[0]/reverser</property>
+                    </binding>
+                    <binding>
+                    	<command>property-toggle</command>
+                    	<property>controls/engines/engine[1]/reverser</property>
+                    </binding>
+            	</key>
+		<!-- Autopilot dialog override -->
+		<key n="267">
+		    <name>F11</name>
+		    <desc>Open autopilot dialog</desc>
+		    <binding>
+			<command>nasal</command>
+			<script>dialogs.ap_settings.toggle()</script>
+		    </binding>
+		</key>
+		<!-- Radio Stack override -->
+		<key n="268">
+        	    <name>F12</name>
+        	    <desc>Radio Stack</desc>
+          	    <binding>
+            		<command>nasal</command>
+			<script>dialogs.Radio.toggle()</script>
+          	    </binding>
+     	 	</key>
+		<key n="2">
+		    <name>Ctrl-b</name>
+		    <desc>Cycle speedbrake setting</desc>
+		    <binding>
+			<command>property-cycle</command>
+			<property>controls/flight/speedbrake-lever</property>
+			<value>0</value> <!-- DOWN -->
+			<value>1</value> <!-- ARMED -->
+			<value>2</value> <!-- 50% -->
+			<value>3</value> <!-- UP -->
+		    </binding>
+		</key>
+            </keyboard>
+	</input>
+
+	<controls>
+		<flight>
+		    <fdm-speedbrake type="double">0</fdm-speedbrake>
+		    <ground-spoilers-cmd-norm type="double">0</ground-spoilers-cmd-norm>
+		    <left-speedbrake-cmd-norm type="double">0</left-speedbrake-cmd-norm>
+		    <right-speedbrake-cmd-norm type="double">0</right-speedbrake-cmd-norm>
+		    <speedbrake-lever type="int">0</speedbrake-lever>
+		    <speedbrake-cmd-norm type="double">0</speedbrake-cmd-norm>
+		</flight>
+        	<gear>
+        	    <brake-parking type="bool">1</brake-parking>
+        	</gear>
+		<lighting>
+		    <strobe>0</strobe>
+		    <beacon>0</beacon>
+		    <landing-lights>0</landing-lights>
+		    <nav-lights>0</nav-lights>
+		</lighting>
+	</controls>
+
+	<limits n="0">
+        	<max-flap-extension-speed>
+        	    <flaps>0.033</flaps>
+        	    <speed>245</speed>
+        	</max-flap-extension-speed>
+        	<max-flap-extension-speed>
+       		    <flaps>0.166</flaps>
+        	    <speed>225</speed>
+        	</max-flap-extension-speed>
+        	<max-flap-extension-speed>
+        	    <flaps>0.500</flaps>
+        	    <speed>215</speed>
+        	</max-flap-extension-speed>
+        	<max-flap-extension-speed>
+       		    <flaps>0.666</flaps>
+        	    <speed>205</speed>
+       		</max-flap-extension-speed>
+        	<max-flap-extension-speed>
+        	    <flaps>0.833</flaps>
+       		    <speed>190</speed>
+        	</max-flap-extension-speed>
+        	<max-flap-extension-speed>
+        	    <flaps>1.000</flaps>
+        	    <speed>168</speed>
+        	</max-flap-extension-speed>
+        	<max-gear-extension-speed>270</max-gear-extension-speed>
+        	<vne>600</vne>
+        	<max-positive-g>2.5</max-positive-g>
+        	<max-negative-g>-1.76</max-negative-g>
+	</limits>
+
+	<nasal>
+            <b767>
+        	<file>Aircraft/767-300/Nasal/electrical.nas</file>
+        	<file>Aircraft/767-300/Nasal/gpws.nas</file>
+        	<file>Aircraft/767-300/Nasal/eicas.nas</file>
+            	<file>Aircraft/767-300/Nasal/AFDS.nas</file>
+            	<file>Aircraft/767-300/Nasal/flightdirector.nas</file>
+	    	<!--file>Aircraft/767-300/Nasal/lighting.nas</file-->
+	    	<file>Aircraft/767-300/Models/Instruments/ND/ND.nas</file>
+            	<file>Aircraft/767-300/Nasal/systems.nas</file>
+            	<file>Aircraft/767-300/Nasal/pneumatic.nas</file>
+            	<file>Aircraft/767-300/Nasal/fuel_system.nas</file>
+            	<file>Aircraft/767-300/Nasal/hydraulic.nas</file>
+            	<file>Aircraft/Generic/limits.nas</file>
+            </b767>
+	    <cdu>
+		<!--file>Aircraft/Instruments-3d/cdu/boeing.nas</file-->
+		<file>Aircraft/767-300/Nasal/boeing_cdu.nas</file>
+	    </cdu>
+    	    <walk>
+	    	<file>Aircraft/767-300/Nasal/walk.nas</file>
+    	    </walk>
+
+	    <!-- A randomized failure system. Optional. Uncomment to activate: -->
+    	    <!--failures>
+	    	<file>Aircraft/767-300/Nasal/Failures.nas</file>
+   	    </failures-->
+	    <v-speeds>
+		<file>Aircraft/767-300/Nasal/v-speeds.nas</file>
+	    </v-speeds>
+	    <auto-coord>
+		<file>Aircraft/767-300/Nasal/auto_coord.nas</file>
+	    </auto-coord>
+	    <dialogs>
+		<file>Aircraft/767-300/Nasal/dialogs.nas</file>
+	    </dialogs>
+	    <pressurization>
+		<file>Aircraft/767-300/Nasal/cabin-pressure.nas</file>
+	    </pressurization>
+	</nasal>
+ 
+</PropertyList>

@@ -1,0 +1,28 @@
+This is a model replica of a Boeing 767-300 typical Aircraft, Designed and manufactured in real life by Boeing
+Commercial Airplanes, of the United States of America. It has two Pratt & Whitney JT9D-7R4D engines.
+
+Boeing announced that it was developing a stretched development of the 767-200 in February 1982.
+The resulting 767-300 features a 6.42m (21ft 1in) stretch consisting of fuselage plugs forward (3.07m/10ft 1in)
+and behind (3.35m/11ft) the wing centre section. The flightdeck and systems were carried directly over from the
+767-200, the only other changes were minor, and related to the increased weights of the new version. Initially
+the max takeoff weight was the same as the later 767-200ER. The 767-300 flew for the first time on January 30
+1986, and was awarded certification and entered service in September that year. The higher weight Extended Range
+ER version flew on December 19 1986, while RollsRoyce RB-211-524G engines became available from 1989. The range
+of the 767-300ER has proven to be very popular with a number of airlines using them for long range low density
+flights. In 1993 Boeing launched the 767-300F General Market Freighter. Changes include strengthened undercarriage
+and wing structure, a cargo handling system, no cabin windows and a main deck freight door. Capacity is 24
+containers. There was also a seperate (Stretched) 767-400 version.
+
+
+This model has been created for FlightGear Open Source simulator, in convergence with the GNU GPL License, meaning
+it is free to enhance, free to redistribute and of course to share.
+
+Modelling and details have been as accurately modelled as possible given time and alot of effort. Therefore all
+lifelike details are trademarks by the property of their respective owners. Airline operators in particular are
+no way involved with the recreation of their models in this aircraft. No parts of images, models, sounds, or
+anything else is direct use of other simulators or other peoples work, however things like Airlines Liveries are
+based on real life photographs, which have been used from official websites, and models based on information found
+from the Boeing company itself. Any respective authors and providers have been listed in the Thanks.text file, also
+provided.
+
+Information courtesy of Wikipedia.org.

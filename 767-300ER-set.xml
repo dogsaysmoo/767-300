@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<PropertyList include="767-300-main.xml">
+    <sim>
+	<description>Boeing 767-300ER</description>
+	<author>Liam Gathercole and Isaias V. Prestes (model, animations), Juuso Tapaninen (cockpit), John Williams (FDM, systems)</author>
+	<status>alpha</status>
+	<rating>
+		<FDM type="int">2</FDM>
+		<systems type="int">4</systems>
+		<cockpit type="int">4</cockpit>
+		<model type="int">2</model>
+	</rating>
+	<aircraft-version>20151000</aircraft-version>
+	<flight-model>yasim</flight-model>
+	<fuel-fraction>0.75</fuel-fraction>
+	<aero>767-300ER</aero>
+		
+        <model>
+            <path>Aircraft/767-300/Models/767-300.xml</path>
+        </model>
+
+        <menubar>
+            <default>
+                <menu n="100">
+                    <label>767-300ER</label>
+		</menu>
+            </default>
+        </menubar>
+
+        <weight n="1">
+        <!--  325 pax max @ 180 lbs-->
+            <name>Passengers and Cargo</name>
+            <weight-lb>50000</weight-lb>
+            <max-lb>96560</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+
+    </sim>
+
+    <instrumentation>
+		<!-- CDU stuff: http://wiki.flightgear.org/index.php/Howto:_Implement_a_Control_Display_Unit -->
+	<cdu>
+		<display>IDENT</display>
+		<ident>
+			<model>767-300ER</model>
+			<engines>CF6-80C2</engines>
+		</ident>
+		<input />
+		<serviceable type="bool">true</serviceable>
+	</cdu>
+    </instrumentation>
+
+    <limits n="0">
+	<mass-and-balance>
+	    <maximum-takeoff-mass-lbs>412000</maximum-takeoff-mass-lbs>
+	    <maximum-landing-mass-lbs>320000</maximum-landing-mass-lbs>
+	</mass-and-balance>
+    </limits>
+
+</PropertyList>
