@@ -12,6 +12,9 @@ var fuelsys = {
 	m.pumpC = m.controls.initNode("tank[2]/pump",0,"BOOL");
 	m.xfeed = m.controls.initNode("x-feed",0,"BOOL");
 
+	m.dumpV = m.controls.initNode("dump-valve",0,"BOOL");
+	m.dumpP = m.controls.initNode("dump-pump",0,"BOOL");
+
 	m.sel = [ m.tanks.getNode("tank/selected",1),
 		m.tanks.getNode("tank[1]/selected",1),
 		m.tanks.getNode("tank[2]/selected",1),
@@ -162,8 +165,10 @@ var fuelsys = {
 		me.pumpL.setBoolValue(0);
 	if (right == 0)
 		me.pumpR.setBoolValue(0);
-	if (left == 0 and right == 0)
+	if (left == 0 and right == 0) {
 		me.pumpC.setBoolValue(0);
+		me.dumpP.setBoolValue(0);
+	}
     },
 
     apu_fuelcon : func (dt,src) {
@@ -228,6 +233,19 @@ var fuelsys = {
 	if (getprop("engines/apu/running")) me.apu_fuelcon(dt,get_src(0));
 
 	settimer(func{me.idle_fuelcon();},0);
+    },
+
+    fuel_dump : func {
+	var rate = 22.0 * getprop("sim/speed-up");
+	me.elec_update();
+	if (me.dumpV.getBoolValue() and me.dumpP.getBoolValue()) {
+		if (me.lev[2].getValue() > rate) {
+			me.lev[2].setValue(me.lev[2].getValue() - rate);
+		} else {
+			me.dumpP.setBoolValue(0);
+		}
+		settimer(func {me.fuel_dump();},0.5);
+	}
     }
 };
 var autostarting = 0;
@@ -244,4 +262,13 @@ setlistener("/sim/model/start-idling", func (auto) {
 	}
 },0,0);
 
+# Triggers for fuel jettison
+setlistener("controls/fuel/dump-valve", func {
+	if (getprop("controls/fuel/dump-pump") and getprop("controls/fuel/dump-valve"))
+		B767fuel.fuel_dump();
+},0,0);
+setlistener("controls/fuel/dump-pump", func {
+	if (getprop("controls/fuel/dump-pump") and getprop("controls/fuel/dump-valve"))
+		B767fuel.fuel_dump();
+},0,0);
 

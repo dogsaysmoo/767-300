@@ -157,6 +157,8 @@ var advisory_messages = func {
 		append(msgs_advisory," *ENG SHUTDOWN 1");
 	if (getprop("engines/engine[1]/rpm") < 19)
 		append(msgs_advisory," *ENG SHUTDOWN 2");
+	if (getprop("controls/fuel/dump-valve") and getprop("controls/fuel/dump-pump"))
+		append(msgs_advisory," FUEL JETTISON");
 	if (getprop("autopilot/route-manager/active") and (getprop("autopilot/route-manager/route/num") < 2 or getprop("autopilot/route-manager/departure/runway") == ""))
 		append(msgs_advisory,"INVALID ROUTE");
 	if (getprop("instrumentation/afds/ap-modes/roll-mode") == "LNAV" and !getprop("autopilot/route-manager/active"))
