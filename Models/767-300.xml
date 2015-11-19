@@ -1023,6 +1023,39 @@
         </offsets>
     </model>
  
+<!-- ############# -->
+<!-- Fuel Jettison -->
+<!-- ############# -->
+    <model>
+	<name>FuelDumpL</name>
+	<path>Aircraft/767-300/Models/Effects/fuel-dump.xml</path>
+	<offsets>
+	    <x-m>  7.0</x-m>
+	    <y-m>-17.2</y-m>
+	    <z-m> -1.7</z-m>
+	</offsets>
+    </model>
+    <model>
+	<name>FuelDumpR</name>
+	<path>Aircraft/767-300/Models/Effects/fuel-dump.xml</path>
+	<offsets>
+	    <x-m>  7.0</x-m>
+	    <y-m> 17.2</y-m>
+	    <z-m> -1.7</z-m>
+	</offsets>
+    </model>
+    <animation>
+	<type>select</type>
+	<object-name>FuelDumpL</object-name>
+	<object-name>FuelDumpR</object-name>
+	<condition>
+	    <and>
+		<property>controls/fuel/dump-valve</property>
+		<property>controls/fuel/dump-pump</property>
+	    </and>
+	</condition>
+    </animation>
+
 <!-- ###### -->
 <!-- Rudder -->
 <!-- ###### -->
