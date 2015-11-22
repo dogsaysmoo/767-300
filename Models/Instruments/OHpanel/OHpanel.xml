@@ -297,7 +297,7 @@
 		<center>
 			<x-m>0</x-m>
 			<y-m>-0.03813</y-m>
-			<z-m>-0.04518</z-m>
+			<z-m> 0.03571</z-m>
 		</center>
 	</animation>
 
@@ -331,7 +331,7 @@
 		<center>
 			<x-m>0</x-m>
 			<y-m>0.02780</y-m>
-			<z-m>-0.04518</z-m>
+			<z-m>0.03571</z-m>
 		</center>
 	</animation>
 
@@ -451,6 +451,62 @@
                         <z>0</z>
                 </axis>
         </animation>
+
+	<!-- Fuel Jettison Panel -->
+	<animation>
+		<type>pick</type>
+		<object-name>Jett_noz_L.sw</object-name>
+		<object-name>Jett_noz_R.sw</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/fuel/dump-valve</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>Jett_noz_L.sw</object-name>
+		<object-name>Jett_noz_R.sw</object-name>
+		<property>controls/fuel/dump-valve</property>
+		<factor>0.5</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>Jett_pump.sw</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/fuel/dump-pump</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Jett_pump.sw</object-name>
+		<property>controls/fuel/dump-pump</property>
+		<factor>-45</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.033</y-m>
+			<z-m>-0.0477</z-m>
+		</center>
+	</animation>
 
 	<!-- Fuel tank indicators -->
 	<animation>
@@ -965,21 +1021,25 @@
 	</animation>
 	
 			<!-- lights -->
-	        <effect>
-        <inherits-from>Effects/model-transparent</inherits-from>
-   <object-name>OHpanel_lights</object-name>
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>OHpanel_lights</object-name>
 		<object-name>OHpanel_lights2</object-name>
-      <object-name>OHpanel_lights3</object-name>
-            <object-name>cblights</object-name>
-            				<object-name>Cube.012</object-name>
-    </effect>
+		<object-name>OHpanel_lights3</object-name>
+		<object-name>OHpanel_lights4</object-name>
+		<object-name>cblights</object-name>
+		<object-name>Cube.012</object-name>
+		<object-name>Fuel_Jett_Light</object-name>
+	</effect>
 
 	<animation>
 		<name>Panel lighting</name>
 		<type>material</type>
 		<object-name>OHpanel_lights</object-name>
 		<object-name>OHpanel_lights2</object-name>
-    <object-name>OHpanel_lights3</object-name>
+		<object-name>OHpanel_lights3</object-name>
+		<object-name>OHpanel_lights4</object-name>
+		<object-name>Fuel_Jett_Light</object-name>
 		<emission>
 			<red>1</red>
 			<green>1</green>
@@ -1382,7 +1442,7 @@
   
   
 
-			<animation>
+	<animation>
 		<name>dome light rotate</name>
 		<type>rotate</type>
 		<object-name>dome_light</object-name>
@@ -1405,7 +1465,7 @@
 	
 
 	
-				<animation>
+	<animation>
 		<name>circuit breaker light rotate</name>
 		<type>rotate</type>
 		<object-name>cb_panel_knob</object-name>
@@ -1426,11 +1486,11 @@
 		</center>
 	</animation>
 	
-		<animation>
+	<animation>
 		<name>Panel lighting</name>
 		<type>material</type>
 		<object-name>cblights</object-name>
-				<object-name>Cube.012</object-name>
+		<object-name>Cube.012</object-name>
 		<emission>
 			<red>1</red>
 			<green>1</green>
