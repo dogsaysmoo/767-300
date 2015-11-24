@@ -10,6 +10,18 @@
         <pitch-deg>-1.0</pitch-deg>
     </offsets>
 
+    <model>
+	<name>winglets</name>
+	<path>Aircraft/767-300/Models/winglets.ac</path>
+    </model>
+    <animation>
+	<type>select</type>
+	<object-name>winglets</object-name>
+	<condition>
+	    <property>sim/model/winglets</property>
+	</condition>
+    </animation>
+
 <!-- Cockpit, with everything included in the flightdeck directed from this file -->
 
     <model>
@@ -61,6 +73,8 @@
         <object-name>GDL</object-name>
         <object-name>GDR</object-name>
         <object-name>cargodoor</object-name>
+        <object-name>WingletL</object-name>
+        <object-name>WingletR</object-name>
         <property-base>sim/model/livery</property-base>
         <texture-prop>texture</texture-prop>
         <texture>TFL.png</texture>
@@ -458,6 +472,29 @@
             <z-m> -1.00</z-m>
         </offsets>
     </model>
+
+    <animation>
+	<type>translate</type>
+	<object-name>flashright</object-name>
+	<property>sim/model/winglets</property>
+	<factor>4.2</factor>
+	<axis>
+	    <x>0.9</x>
+	    <y>0.35</y>
+	    <z>1</z>
+	</axis>
+    </animation>
+    <animation>
+	<type>translate</type>
+	<object-name>flashleft</object-name>
+	<property>sim/model/winglets</property>
+	<factor>4.2</factor>
+	<axis>
+	    <x>0.9</x>
+	    <y>-0.35</y>
+	    <z>1</z>
+	</axis>
+    </animation>
 
     <model>
         <path>Aircraft/767-300/Models/lights/landinglight.xml</path>
