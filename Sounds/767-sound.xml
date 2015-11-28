@@ -40,7 +40,6 @@
         <name>left</name>
         <path>Aircraft/767-300/Sounds/whine.wav</path>
         <mode>looped</mode>
-        <property>engines/engine[0]/rpm</property>
         <pitch>
             <property>/engines/engine[0]/rpm</property>
             <offset>0</offset>
@@ -138,7 +137,6 @@
         <name>right</name>
         <path>Aircraft/767-300/Sounds/whine.wav</path>
         <mode>looped</mode>
-        <property>engines/engine[1]/rpm</property>
         <volume>
             <property>engines/engine[1]/rpm</property>
             <factor>0.1</factor>
@@ -510,7 +508,7 @@
         <max-dist>2.0</max-dist>
     </switch>
 
-    <speedbrake>
+    <!--speedbrake>
         <name>speedbrake</name>
         <mode>in-transit</mode>
         <path>Aircraft/767-300/Sounds/whine.wav</path>
@@ -524,7 +522,7 @@
         </position>
         <reference-dist>2.0</reference-dist>
         <max-dist>5.0</max-dist>
-    </speedbrake>
+    </speedbrake-->
 
     <engines>
         <name>left reverse-thrust</name>
