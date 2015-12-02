@@ -17,7 +17,8 @@
 		
         <model>
             <path>Aircraft/767-300/Models/767-300.xml</path>
-	    <winglets type="bool">false</winglets>
+	    <!--winglets type="bool">false</winglets-->
+	    <variant type="int">0</variant>
         </model>
 
         <menubar>
