@@ -507,11 +507,12 @@
         <name>NoseGearLandinglight</name>
         <condition>
 	  <and>
-            <equals>
+            <greater-than>
                 <property>gear/gear[0]/position-norm</property>
-                <value type="bool">true</value>
-            </equals>
-	    <property>controls/lighting/landing-lights[1]</property>
+                <value>0.75</value>
+            </greater-than>
+	    <!--property>controls/lighting/landing-lights[1]</property-->
+	    <property>sim/multiplay/generic/int[5]</property>
 	  </and>
         </condition>
         <offsets>
@@ -531,7 +532,8 @@
             </equals>
         </condition-->
 	<condition>
-	    <property>controls/lighting/landing-lights</property>
+	    <!--property>controls/lighting/landing-lights</property-->
+	    <property>sim/multiplay/generic/int[4]</property>
 	</condition>
         <offsets>
             <x-m>-6.30</x-m>
@@ -550,7 +552,8 @@
             </equals>
         </condition-->
 	<condition>
-	    <property>controls/lighting/landing-lights</property>
+	    <!--property>controls/lighting/landing-lights</property-->
+	    <property>sim/multiplay/generic/int[4]</property>
 	</condition>
         <offsets>
             <x-m>-6.30</x-m>
