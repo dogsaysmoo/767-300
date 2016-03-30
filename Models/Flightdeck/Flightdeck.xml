@@ -2131,4 +2131,83 @@
 		</action>
 	</animation>
 
+<!-- EEC Thrust Mode Panel -->
+	<animation>
+		<type>pick</type>
+		<object-name>TOGA_thr.btn</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>nasal</command>
+			<script>b767.afds.input(4,1);</script>
+		    </binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>CLB_thr.btn</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>nasal</command>
+			<script>b767.afds.input(4,2);</script>
+		    </binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>CLB1_thr.btn</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>nasal</command>
+			<script>b767.afds.input(4,3);</script>
+		    </binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>CLB2_thr.btn</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>nasal</command>
+			<script>b767.afds.input(4,4);</script>
+		    </binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>CON_thr.btn</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>nasal</command>
+			<script>b767.afds.input(4,5);</script>
+		    </binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>CRZ_thr.btn</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>nasal</command>
+			<script>b767.afds.input(4,6);</script>
+		    </binding>
+		</action>
+	</animation>
+
 </PropertyList>
