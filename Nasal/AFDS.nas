@@ -171,7 +171,8 @@ var AFDS = {
 		} else {
 		    me.vs_setting.setValue(vs_now);
 	 	}
-		if (me.vertical_mode.getValue() == 13) me.autothrottle_mode.setValue(5);
+		if (me.vertical_mode.getValue() > 7 and me.autothrottle_mode.getValue() > 0)
+		    settimer(func me.autothrottle_mode.setValue(5),2);
 	    }
             if (btn==5) {
                 # VNAV
