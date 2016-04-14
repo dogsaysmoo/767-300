@@ -98,8 +98,7 @@
     <!-- Pushback -->
     <model>
         <name>Pushback</name>
-        <!--path>Models/Airport/Pushback/Goldhofert.xml</path-->
-        <path>Aircraft/757-200/Models/Pushback/pushback.xml</path>
+        <path>Models/Airport/Pushback/Goldhofert.xml</path>
         <condition>
             <less-than-equals>
                 <property>velocities/airspeed-kt</property>
