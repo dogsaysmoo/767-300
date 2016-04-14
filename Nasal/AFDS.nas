@@ -733,3 +733,9 @@ var update_afds = func {
 	settimer(update_afds, 0);
     }
 }
+
+setlistener("autopilot/internal/disconnect-signal", func (sig) {
+	if (sig.getBoolValue())
+		afds.APyokebtn();
+},0,0);
+
