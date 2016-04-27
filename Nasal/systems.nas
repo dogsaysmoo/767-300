@@ -26,7 +26,7 @@ var light_stat = {
 	m.strobe_sw = m.light_controls.getNode("strobe",0);
 	m.logo_sw = m.light_controls.getNode("logo-lights",0);
 #	m.wing_sw = m.light_controls.getNode("wing-lights",0);
-	m.taxi_sw = m.light_controls.getNode("landing-lights[1]",0);
+#	m.taxi_sw = m.light_controls.getNode("landing-lights[1]",0);
 	m.Lland_sw = m.light_controls.getNode("landing-lights[0]",0);
 #	m.Rland_sw = m.light_controls.getNode("landing-lights[2]",0);
 	
@@ -68,7 +68,7 @@ var light_stat = {
 #		me.wing.setBoolValue(0);
 #	    }
 	    # Taxi light:
-	    if (me.taxi_sw.getBoolValue() and getprop("gear/gear[0]/position-norm") > 0.75) {
+	    if (me.Lland_sw.getBoolValue() and getprop("gear/gear[0]/position-norm") > 0.99) {
 		me.taxi.setBoolValue(1);
 	    } else {
 		me.taxi.setBoolValue(0);
@@ -103,6 +103,16 @@ var light_stat = {
 	    }
 	} else {
 	    me.nav.setBoolValue(0);
+	}
+	if (me.Lland.getBoolValue() and getprop("sim/current-view/internal")) {
+	    setprop("sim/rendering/als-secondary-lights/use-landing-light",1);
+	    setprop("sim/rendering/als-secondary-lights/use-alt-landing-light",1);
+	    setprop("sim/rendering/als-secondary-lights/landing-light1-offset-deg",10);
+	    setprop("sim/rendering/als-secondary-lights/landing-light2-offset-deg",-1.5);
+	    setprop("sim/rendering/als-secondary-lights/landing-light3-offset-deg",4);
+	} else {
+	    setprop("sim/rendering/als-secondary-lights/use-landing-light",0);
+	    setprop("sim/rendering/als-secondary-lights/use-alt-landing-light",0);
 	}
     },
 };

@@ -1305,7 +1305,7 @@
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>controls/lighting/landing-lights[1]</property>
+				<property>controls/lighting/landing-lights[0]</property>
 			</binding>
 		</action>
 	</animation>
@@ -1314,7 +1314,7 @@
 		<type>rotate</type>
 		<object-name>NLndingLtSwtch</object-name>
 		<object-name>NLndingLtSwtch.lights</object-name>
-		<property>controls/lighting/landing-lights[1]</property>
+		<property>controls/lighting/landing-lights[0]</property>
 		<factor>30</factor>
 		<axis>
 			<x>0</x>

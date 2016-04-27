@@ -19,6 +19,12 @@
 		<td type="double">0.00001</td>
 		<position-norm type="double">0</position-norm>
 	    </pushback>
+	    <door>
+		<position-x-m type="float">-21.25</position-x-m>
+		<position-y-m type="float"> -2.37</position-y-m>
+		<position-z-m type="float"> -1.8</position-z-m>
+		<jetway-hood-deg type="float">4</jetway-hood-deg>
+	    </door>
         </model>
 
 	<view n="0">
@@ -183,11 +189,11 @@
             </key>
             <key>
                 <name>Ctrl-b</name>
-                <desc>toggle speed brakes</desc>
+                <desc>cycle speed brakes settings</desc>
             </key>
             <key>
-                <name>s</name>
-                <desc>hold to start engines</desc>
+                <name>l</name>
+                <desc>toggle landing lights</desc>
             </key>
 	    <text>
 === Takeoff Procedure ===
@@ -510,6 +516,14 @@ Service Ceiling: 39,000ft
 
     	<input>
             <keyboard>
+            	<key n="108">
+		    <name>l</name>
+		    <desc>toggle landing lights</desc>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/lighting/landing-lights[0]</property>
+		    </binding>
+	    	</key>
 		<key n="119">
 		    <name>w</name>
 		    <desc>Walk forward toward view</desc>
