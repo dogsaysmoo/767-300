@@ -845,7 +845,7 @@
 
 <seatbelt>
 <name>Seatbelt</name>
- <path>Aircraft/767-300/Sounds/Cabin/seatbelt.wav</path>
+ <path>Aircraft/767-300/Sounds/seatbelt.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -865,7 +865,7 @@
 </seatbelt>
 
 
-<music-left>
+<!--music-left>
 <name>Music</name>
  <path>Aircraft/767-300/Sounds/Cabin/music-left.wav</path>
  <mode>looped</mode>
@@ -1032,28 +1032,7 @@
  </position>
  <reference-dist>10.0</reference-dist>
  <max-dist>100.0</max-dist>
-</emergency>
-
-<safety>
-<name>safety</name>
- <path>Aircraft/767-300/Sounds/Cabin/safety.wav</path>
- <mode>once</mode>
- <condition>
- <and>
-  <property>controls/switches/safety</property>
- </and>
- </condition>
-  <volume>
-   <property>sim/sound/Evolume</property>
-  </volume>
-  <position>
-      <x>0.00</x>
-      <y>0.00</y>
-      <z>-0.00</z>
- </position>
- <reference-dist>10.0</reference-dist>
- <max-dist>100.0</max-dist>
-</safety>
+</emergency-->
 
 </fx>
 
